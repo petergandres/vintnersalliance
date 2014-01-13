@@ -1,0 +1,159 @@
+.backToTop{
+	background: #222;
+	bottom: 1em;
+	color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	display: none;
+	height: 5em;
+	line-height: 5em;
+	opacity: 0.6;
+	position: fixed;
+	right: 1em;
+	text:{
+		align: center;
+		decoration: none;
+	}
+	width: 5em;
+	z-index: 1000;
+}
+
+.content {
+	margin-bottom: 3em;
+	@include group();
+
+	@media screen and (max-width: 580px){
+		padding: 0 0.5em;
+	}
+}
+
+.col2{
+	@media screen and (min-width: 581px){
+		float: left;
+		margin-left: 4%;
+		width: 48%;
+	}
+
+	&:first-child {
+		margin-left: 0;
+	}
+	@include group();
+}
+
+.col3{
+	@media screen and (min-width: 581px){
+		float: left;
+		margin-left: 2%;
+		width: 31%;
+	}
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.v65-featureRight, .v65-right, 
+.v65-featureLeft, .v65-left, 
+.v65-border{
+	@include boxSizing;
+}
+
+/* ------- Shop by layout -------*/
+.shopBy {
+	margin-bottom: 2em;
+	@include group();
+}
+
+.shopByItem {
+	background: url("../images/horizontalBullets.jpg") bottom center no-repeat;
+	float: left;
+	padding: 1em 2% 1em 1%;
+	width: 50%;
+	@include boxSizing();
+}
+.shopByItem .image {
+	float: left;
+	width: 45%;
+}
+.shopByItem .title, .shopByItem p {
+	float: right;
+	width: 50%;
+}
+
+.shopByItem .title {
+	@include font-size(13px);
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.shopByItem p {
+	@include font-size(11px);
+}
+
+.shopByItem.noImage .title, .shopByItem.noImage p {
+	float: none;
+	width: 100%;
+}
+
+/* ------- Promo Email -------*/
+.promoContentLeftCol {
+	float: left;
+	padding-right: 5%;
+	width: 55%;
+	@include boxSizing();
+
+  	@media screen and (max-width: 620px){
+		float: none;
+		padding: 0;
+		margin: 0 0 2em;
+		width: 100%;
+	}
+}
+
+	.promoContent {
+		padding: 30px 30px 10px 30px;
+	}
+
+.promoContentRightCol {
+	float: right;
+	width: 40%;
+	@include boxSizing();
+
+  	@media screen and (max-width: 620px){
+		float: none;
+		margin: 0 0 2em;
+		width: 100%;
+	}
+}
+
+	.promoContentRightCol .v65-productGroup-title {
+		display: none;
+	}
+
+	.promoContentRightCol .v65-productGroup-teaser {
+		background: image-url("horizontalBullets.jpg") bottom center no-repeat;
+		font-size: 14px;
+		margin: 0;
+		padding: 0 0 1em;
+	}
+
+	.promoContentRightCol .v65-productGroup-teaser p {
+		margin-bottom: 1em;
+	}
+
+	.promoContentRightCol .v65-productGroup-products {
+		background: none;
+	}
+
+	.promoContentRightCol .v65-productGroup-product {
+		width: 100%;
+	}
+
+	.promoContentRightCol .v65-productGroup-product .v65-product-photo {
+		width: 85px;
+	}
+
+	.promoContentRightCol .v65-productGroup-product .v65-product-photo img {
+	  max-width: 100%;
+	}
+

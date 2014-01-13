@@ -1,0 +1,22 @@
+<script type="text/javascript">
+// Read Cookie
+var cookies = ("" + document.cookie != "") ? (document.cookie).split("; ") : [];
+var data = [];
+for (c = 0; c < cookies.length; c++) {
+  if (cookies[c].match(/origin_cookie=(.*)/i)) {
+    data = RegExp.$1.split(',');
+  }
+}
+
+// Read query string param
+var site = /site=(\w+)/i.exec(location.search);
+site = (site && site.length > 1) ? site[1] : '';
+
+// Append to cookie if site is not blank
+if (site != '') {
+	data.push(site);
+	var len = data.length;
+	// Set cookie
+	document.cookie='origin_cookie='+data[len-1];
+}
+</script>

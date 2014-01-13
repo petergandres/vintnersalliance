@@ -1,0 +1,167 @@
+header {
+	border-bottom: 2px solid #828064;
+	margin: 0 auto 1em auto;
+	@include boxSizing;
+	position: relative;
+	z-index: 100;
+
+	@media screen and (max-width: 970px) and (min-width: 580px) {
+		padding-top: 36px;
+	}
+}
+
+header.checkout {
+	@media screen and (max-width: 970px) and (min-width: 580px) {
+		padding-top: 10px;
+	}
+}
+
+	#user-tools {
+		height: 25px;
+		padding: 0px 10px 0px 0px;
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		float: none;
+		@include font-size(12px);
+		line-height: 25px;
+		position: absolute;
+		top: 6px;
+		right: 10px;
+		width: 330px;
+
+		@media screen and (max-width: 580px){
+			background: #000;
+			border-bottom: 1px solid #000;
+			height: 4em;
+			line-height: 4em;
+			margin-bottom: 0.8em;
+			position: relative;
+			right: 0;
+			top: 0;
+			width: 100%;
+		}
+
+		a {
+			color: #828064;
+
+			&:hover {
+				color: #000;
+			}
+			
+			@media screen and (max-width: 580px){
+				color: #fff;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
+		}
+	}
+
+	#v65-modalCart {
+		background: url(../images/ico-shopping-cart.png) center left no-repeat;
+		background-size: 24px;
+		padding-left: 30px;
+		right: 10px;
+
+		@media screen and (max-width: 580px){
+			right: 0;
+			background: none;
+		}
+	}
+
+	.v65-login, .v65-logout {
+		margin-top: 0;
+	}
+
+	.v65-yourAccount, .v65-editProfile {
+		margin-top: 0;
+		padding-left: 10px;
+		width: auto;
+
+		@media screen and (max-width: 580px) {
+			padding: 0;
+			text-align: center;
+			width: 33%;
+		}
+	}
+
+	.logo{
+		background: url("../images/vintners-alliance-logo.png") no-repeat;
+		height: 70px;
+		max-width: 100%;
+		width: 400px;
+		@include hideText();
+
+		@media screen and (max-width: 970px){
+			margin: 0 auto;
+		}
+
+		@media screen and (max-width: 400px){
+			background-position: center center;
+			background-size: 100%;
+		}
+
+	}
+
+	.productSearch {
+		float: left;
+		padding-top: 4px;
+		width: 25%;
+		text-align: right;
+
+		@media screen and (max-width: 1040px){
+			width: 20%
+		}
+
+		@media screen and (max-width: 970px){
+			width: 23%
+		}
+
+		@media screen and (max-width: 940px){
+			float: none;
+			margin: 0 0 1em;
+			text-align: center;
+			width: 100%;
+		}
+
+		form {
+			margin: 0;
+		}
+
+		fieldset {
+			border: 0;
+			padding: 0;
+			margin: 0;
+		}
+
+		div {
+			display: inline;
+		}
+
+		#v65-searchWidgetInput input {
+			height: 32px;
+			line-height: 32px;
+			width: 140px;
+
+			@media screen and (min-width: 1080px){
+				width: 190px;
+			}
+
+			@media screen and (max-width: 940px){
+				width: 190px;
+			}
+		}
+
+		#v65-searchWidgetButton button {
+			background: url(../images/ico-search.png) center center no-repeat;
+			background-size: 100% 100%;
+			border: 0;
+			width: 24px;
+			height: 24px;
+		}
+
+		#v65-searchWidgetButton span {
+			display: none;
+		}
+	}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<v65:metaTags></v65:metaTags>
+
+	<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+	<!--//Vin65 QuickLaunch//-->
+	<script type="text/javascript" src="http://quicklaunch.vin65.com/quicklaunch.js"></script>
+	<!--//Vin65 QuickLaunch//-->
+
+	<v65:customFile file="/v65html/_mailChimp.html"></v65:customFile>
+	<v65:customFile file="/v65html/_inspectlet.html"></v65:customFile>
+	<v65:customFile file="/v65html/_olark.html"></v65:customFile>
+
+	<v65:css files="/assets/css/screen.min.css"></v65:css>
+	
+	<!--[if lt IE 9]>
+		<script src="/assets/js/html5shiv-printshiv.js"></script>
+		<script src="/assets/js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body class="checkoutContent">
+	
+	<v65:customFile file="/v65html/_tealium.html"></v65:customFile>
+
+	<header class="checkout">
+
+		<h1 class="logo">
+			<a href="/" accesskey="h"><v65:websiteName></v65:websiteName></a>
+		</h1>
+
+	</header>
+
+	<section class="contentWrapper">
+
+		<a class="backToTop" href="#"><i class="icon-up-bold"></i>TOP</a>
+
+		<div class="content">
+			<v65:mainContent></v65:mainContent>
+			<v65:customFile file="/v65html/_digiCert.html"></v65:customFile>
+		</div>
+
+	</section>
+
+	<footer class="wide">
+
+		<v65:layoutFooterNav></v65:layoutFooterNav>
+		<p><v65:copyright></v65:copyright></p>
+		<p class="accolade"><v65:vin65Accolade></v65:vin65Accolade></p>
+
+	</footer>
+
+
+<v65:js files="/assets/js/scripts.js"></v65:js>
+
+<script>
+	$("#v65-checkoutSecure").replaceWith($("#digiCertWrapper"));
+	$( ".keepShoppingBottom" ).prependTo( "#v65-continueOrder" );
+
+	// store url for current page as global variable
+	var current_page = document.location.href
+
+	// apply selected states depending on current page
+	if (current_page.match(/receipt/)) {
+		$( "#Form228a7904-e134-9ccf-82c9-ba31f0302040  input[type='checkbox']:first" ).prop({
+		  checked: true
+		});
+
+		var visitorEmail = v65.cookies.readCookie("email_cookie");
+		visitorEmail = $.trim(visitorEmail);
+
+		if (visitorEmail.length > 3) {
+			$('input[name=Email]').val(visitorEmail);
+			$('input[name=Email]').prop('type', 'hidden');
+		}
+	}
+
+
+	$(window).scroll(function () {
+	   var y = $(this).scrollTop();
+	   browserWidth = $(window).width();
+			
+		if(browserWidth > 725){
+			
+			// whether that's below the current location
+			newTop = y - 274;
+			if (y >= 340) {
+				$( "#v65-checkoutCartSummaryWrapper" ).css("top",newTop);
+			} else {
+				$( "#v65-checkoutCartSummaryWrapper" ).css("top","12px");
+			}
+		}
+
+	});
+</script>
+
+<v65:customFile file="/v65html/_barilliance.html"></v65:customFile>
+<v65:customFile file="/v65html/_VAjsAPI.html"></v65:customFile>
+
+<!--//Vin65 QuickLaunchFooter//-->
+<script src="http://assets.vin65.com/js/vin65Footer.js" type="text/javascript"></script>
+<!--//Vin65 QuickLaunchFooter//-->
+
+</body>
+</html>

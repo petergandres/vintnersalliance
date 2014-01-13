@@ -1,0 +1,261 @@
+.homepageFeature {
+	border-top: 1px solid #a09f89;
+	text-align: center;
+	@include group();
+	
+	h2 {
+		@include font-size(36px);
+		background: #fff;
+		color: #4d4d43;
+		display: inline-block;
+		font-style: italic;
+		font-weight: normal;
+		margin: -19px auto 1em auto;
+		padding: 0 12px;
+
+		@media screen and (max-width: 580px){
+			margin-bottom: 0.5em;
+		}
+	}
+
+}
+
+	.featureWine {
+		float: left;
+		text-align: left;
+		width: 100%;
+
+		@media screen and (max-width: 580px){
+			float: none;
+			margin: 0 auto;
+			width: 98%;
+		}
+
+		.v65-productGroup-title, .v65-productGroup-teaser {
+			display: none;
+		}
+
+		.v65-productGroup-products {
+			text-align: left;
+		}
+
+		.v65-productGroup-product {
+			float: none;
+			margin: 0 0 1em 0;
+			position: relative;
+			width: 100%;
+			@include group();
+		}
+
+		.productGroup-left {
+			float: left;
+			padding-right: 2%;
+			width: 22%;
+			@include boxSizing();
+
+			@media screen and (max-width: 580px){
+				float: none;
+				margin: 0 auto;
+				width: 80%;
+			}
+		}
+
+			.v65-product-photo {
+				margin: 0 0 1em 0;
+				text-align: center;
+				width: 100%;
+				float: none;
+			}
+
+		.productGroup-right {
+			float: left;
+			width: 45%;
+
+			@media screen and (max-width: 580px){
+				float: none;
+				margin: 0 auto 1em auto;
+				width: 80%;
+			}
+		}
+
+			.v65-product-brand a {
+				color: #5c5c56;
+				@include font-size(14px);
+				text-transform: uppercase;
+			}
+
+			.v65-title {
+				@include font-size(24px);
+			}
+
+	}
+
+		.testimonial {
+			float: right;
+			text-align: left;
+			width: 28%;
+
+			h6, p {
+				text-align: center;
+			}
+
+			blockquote {
+				width: 80%;
+				margin: 0 auto;
+
+				@media screen and (max-width: 580px){
+					width: 100%;
+				}
+			}
+
+			@media screen and (max-width: 580px){
+				float: none;
+				margin: 0 auto 3em auto;
+				width: 80%;
+			}
+		}
+
+.homepageValueSelections {
+	border-top: 1px solid #a09f89;
+	text-align: center;
+	@include group();
+
+	.v65-productGroup-title, .v65-productGroup-teaser {
+		display: none;
+	}
+	
+	h2 {
+		@include font-size(36px);
+		background: #fff;
+		color: #4d4d43;
+		display: inline-block;
+		font-style: italic;
+		font-weight: normal;
+		margin: -19px auto 1em auto;
+		padding: 0 12px;
+	}
+
+	.v65-productGroup-products {
+			text-align: left;
+	}
+
+	.v65-productGroup-product {
+		border-bottom: 2px dotted #ccc;
+		border-right: 2px dotted #ccc;
+		width: 50%;
+		margin: 0 0 3em 0;
+		padding: 0 2% 1em 0;
+		@include boxSizing();
+		@include group();
+
+		@media screen and (max-width: 580px){
+			border: 0;
+			float: none;
+			margin: 0 auto 3em auto;
+			padding-right: 0;
+			width: 98%;
+		}
+	}
+
+	.productGroup-left {
+		float: left;
+		padding-right: 2%;
+		width: 33%;
+		@include boxSizing();
+	}
+
+		.v65-product-photo {
+			margin: 0 auto 1em auto;
+			text-align: center;
+			width: 98%;
+			float: none;
+		}
+
+	.productGroup-right {
+		float: left;
+		width: 66%;
+	}
+
+		.v65-product-brand a {
+			color: #5c5c56;
+			@include font-size(14px);
+		}
+
+		.v65-title {
+			@include font-size(24px);
+		}
+
+}
+
+/*----Royal Slider Slides-------*/
+.slide1 {
+	background: url(../images/carousel/carousel-1-image.jpg) top left no-repeat #4c4c4c;
+	@media screen and (max-width: 580px){
+		background-image: none;
+	}
+}
+
+.slide2 {
+	background: url(../images/carousel/carousel-2-image.jpg) top left no-repeat #4c4c4c;
+	@media screen and (max-width: 580px){
+		background-image: none;
+	}
+}
+
+.slide3 {
+	background: url(../images/carousel/carousel-3-image.jpg) top left no-repeat #4c4c4c;
+	@media screen and (max-width: 580px){
+		background-image: none;
+	}
+}
+
+.slideContent {
+	float: right;
+	text-align: center;
+	padding: 28px 1em 0 0;
+	width: 50%;
+
+	@media screen and (max-width: 790px){
+		margin: 0 auto;
+		width: 60%;
+	}
+
+	@media screen and (max-width: 705px){
+		margin: 0 auto;
+		width: 50%;
+	}
+
+	@media screen and (max-width: 580px){
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	h1 {
+		color: #fff;
+		font-family: $fontSerif;
+		@include font-size(30px);
+		text-shadow: 0 1px 0 #000;
+
+		@media screen and (max-width: 1050px){
+			@include font-size(24px);
+		}
+	}
+
+	h2, h3, h4, h5, h6 {
+		color: #fff;
+		font-family: $fontSerif;
+		@include font-size(24px);
+		text-shadow: 0 1px 0 #000;
+	}
+
+	p {
+		color: #fff;
+		font-family: $fontSanSerif;
+		@include font-size(14px);
+		text-shadow: 0 1px 0 #000;
+	}
+
+	a {
+		color: #fff;
+	}
+}

@@ -1,0 +1,74 @@
+// Button Colors
+$buttonBorder: #a2a191;
+$button: #b7b3a0;
+$buttonFontColor: #fff; 
+$buttonColorTop: #a2a08a;
+$buttonColorBottom: #929077;
+
+// Alt Button Colors
+$altButtonBorder: #a2a191;
+$altButton: (lighten($button, 10%));
+$altButtonFontColor: #fff; 
+
+// Global Variables
+$wrapperWidth: 940px;
+$linkColor: #ab4e4e;
+$linkeColorHover: #cd6262;
+
+$fontSanSerif: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+$fontSerif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+$fontColor: #444444;
+
+$headingFont: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+$headingColor: #4d4d43;
+
+$userToolsBackgroundColor: #000; //Background Color for usertools
+$userToolsColor: #fff; //Font Color for usertools
+$userToolsLinkColor: #ccc; //Font Color for usertools
+$userToolsHoverColor: #fff; //Font Color for usertools
+
+
+@mixin gradient($color1, $color2){
+	background-color: $color1;
+	background-image: -webkit-linear-gradient(top, $color1, $color2);
+	background-image: -moz-linear-gradient(top, $color1, $color2);
+	background-image: -ms-linear-gradient(top, $color1, $color2);
+	background-image: -o-linear-gradient(top, $color1, $color2);
+	background-image: linear-gradient(top, $color1, $color2);
+}
+
+@mixin boxSizing{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+
+@mixin group() {
+    &:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+}
+
+@mixin hideText() {
+	overflow:hidden;
+	text-indent:100%;
+	white-space:nowrap;
+	
+	a{
+		display:block;
+		height:100%;
+	}
+}

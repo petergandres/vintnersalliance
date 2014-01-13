@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<v65:metaTags></v65:metaTags>
+
+	<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+	<!--//Vin65 QuickLaunch//-->
+	<script type="text/javascript" src="http://quicklaunch.vin65.com/quicklaunch.js"></script>
+	<!--//Vin65 QuickLaunch//-->
+
+	<v65:customFile file="/v65html/_mailChimp.html"></v65:customFile>
+	<v65:customFile file="/v65html/_inspectlet.html"></v65:customFile>
+	<v65:customFile file="/v65html/_olark.html"></v65:customFile>
+
+	<v65:css files="/assets/css/screen.min.css"></v65:css>
+	
+	<!--[if lt IE 9]>
+		<script src="/assets/js/html5shiv-printshiv.js"></script>
+		<script src="/assets/js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	
+	<v65:customFile file="/v65html/_tealium.html"></v65:customFile>
+
+	<header>
+
+		<div id="user-tools">
+			<v65:modalCart></v65:modalCart>	
+			<v65:login></v65:login>
+		</div><!--/user-tools-->
+
+		<h1 class="logo">
+			<a href="/" accesskey="h"><v65:websiteName></v65:websiteName></a>
+		</h1>
+
+		<nav class="mainMenu">
+			<v65:layoutHeaderNav depth="2"></v65:layoutHeaderNav>
+			<a href="#footerMenu" class="footerMenuLink"><i class="icon-menu"></i></a>
+		</nav>
+
+		<div class="productSearch">
+			<v65:productSearch></v65:productSearch>
+		</div><!--/productSearch-->
+
+	</header>
+
+	<section class="contentWrapper">
+
+		<a class="backToTop" href="#"><i class="icon-up-bold"></i>TOP</a>
+
+		<div class="content">
+			<v65:mainContent></v65:mainContent>
+			<div id="cartProductGroup">
+				<v65:product:group code="GreetingCards"></v65:product:group>
+			</div>
+		</div>
+
+	</section>
+
+	<footer class="wide">
+
+		<v65:layoutFooterNav></v65:layoutFooterNav>
+		<p><v65:copyright></v65:copyright></p>
+		<p class="accolade"><v65:vin65Accolade></v65:vin65Accolade></p>
+
+	</footer>
+
+
+<v65:js files="/assets/js/scripts.js"></v65:js>
+
+<v65:customFile file="/v65html/_barilliance.html"></v65:customFile>
+<v65:customFile file="/v65html/_VAjsAPI.html"></v65:customFile>
+
+<!--//Vin65 QuickLaunchFooter//-->
+<script src="http://assets.vin65.com/js/vin65Footer.js" type="text/javascript"></script>
+<!--//Vin65 QuickLaunchFooter//-->
+
+</body>
+</html>

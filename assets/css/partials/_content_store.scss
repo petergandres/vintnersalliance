@@ -1,0 +1,233 @@
+/* ------- Left Store Items -------*/
+#v65-navBrandTitle, #v65-navPriceTitle, #v65-navTypeVarietalTitle, #v65-navRegionAppellationTitle {
+	background: url(../images/ico-circle-down.png) no-repeat top right;
+	background-size: 16px 16px;
+	color: #333;
+	cursor: pointer;
+	display: block;
+	@include font-size(12px);
+	font-weight: bold;
+	line-height: 16px;
+	text-transform: uppercase;
+
+	@media screen and (max-width: 580px){
+		background-size: 32px 32px;
+		line-height: 32px;
+	}
+}
+
+#v65-navTypeVarietalTitle, #v65-navRegionAppellationTitle {
+	background: url(../images/ico-circle-up.png) no-repeat top right;
+	background-size: 16px 16px;
+}
+
+#v65-navBrand, #v65-navTypeVarietal, #v65-navRegionAppellation, #v65-navPrice {
+	margin-bottom: 0.5em;
+}
+
+#v65-navBrand > ul/*, #v65-navTypeVarietal > ul, #v65-navRegionAppellation > ul*/, #v65-navPrice > ul {
+	display: none;
+}
+
+	#v65-navBrand strong, #v65-navTypeVarietal strong, #v65-navRegionAppellation strong, #v65-navPrice strong {
+		color: #000;
+		@include font-size(12px);
+	}
+
+	#v65-navBrand a, #v65-navTypeVarietal a, #v65-navRegionAppellation a, #v65-navPrice a {
+		color: #666;
+		@include font-size(12px);
+	}
+
+	.v65-productCount {
+		color: #333;
+		@include font-size(12px);
+	}
+
+.v65-product-attributeLabel {
+	margin-bottom: 0;
+}
+
+.v65-paging {
+	border-bottom: 0;
+}
+
+.v65-pagingBottom {
+	border-top: 0;
+}
+
+.v65-product-sortBy {
+	@include font-size(14px);
+}
+
+/* ------- Product Display -------*/
+.productWrapper {
+	border-bottom: 2px dotted #ccc;
+	border-right: 2px dotted #ccc;
+	float: left;
+	width: 50%;
+	margin: 0 0 3em 0;
+	padding: 0 2% 1em 0;
+	@include boxSizing();
+	@include group();
+
+	@media screen and (max-width: 580px){
+		border: 0;
+		float: none;
+		margin: 0 auto 3em auto;
+		padding-right: 0;
+		width: 98%;
+	}
+}
+
+.productLeft {
+	float: left;
+	padding-right: 2%;
+	width: 33%;
+	@include boxSizing();
+}
+
+	.v65-product-photo {
+		margin: 0 0 1em 0;
+		text-align: center;
+		width: 100%;
+		float: none;
+	}
+
+.productRight {
+	float: left;
+	width: 66%;
+}
+
+	.v65-product-brand a {
+		color: #5c5c56;
+		@include font-size(14px);
+	}
+
+.productDrilldownTitle {
+	.v65-product-brand a {
+		color: #5c5c56;
+		@include font-size(22px);
+	}
+}
+
+/* ------- Checkout -------*/
+#digiCertWrapper {
+  float: left;
+  width: 110px;
+
+  span {
+  	display: none !important;
+  }
+}
+
+#v65-fieldset-wholesalerInfo, #v65-fieldset-billingInfo, 
+#v65-fieldset-shippingOptions, #v65-fieldset-shippingInfo, 
+#v65-fieldset-paymentMethod, #v65-fieldset-sourceCode, 
+#v65-fieldset-usernamePassword{
+	@media screen and (max-width: 725px){
+		width: 98%;
+	}
+}
+
+.v65-productGroup-teaser{
+	width: 100%;
+}
+
+.v65-productGroup-product{
+	&:first-child{
+		margin-left: 0;
+	}
+}
+
+.v65-productGroup{
+	.v65-clear{
+		@media screen and (max-width: 750px){
+			display: none;
+		}
+
+		&.productGroup-2Up-rowClear{
+			display: none;
+
+			@media screen and (min-width:581px) and (max-width: 599px){
+				display: block;
+			}
+		}
+
+		&.productGroup-3Up-rowClear{
+			display: none;
+
+			@media screen and (min-width: 600px) and (max-width: 750px){
+				display: block;
+			}
+		}
+	}
+}
+
+
+.v65-product-addToCart-priceWrapper {
+	color: #ab4e4e;
+	/*color: #828064;*/
+}
+
+	.v65-product-addToCart-unitDescription {
+		display: none;
+	}
+
+
+.v65-product-inventoryMessage {
+	display: none;
+}
+
+.v65-product2Up {
+	border-bottom: 2px dotted #ccc;
+	border-right: 2px dotted #ccc;
+	width: 50%;
+	margin: 0 0 3em 0;
+	padding: 0 0 1em 2%;
+	@include boxSizing();
+}
+
+.v65-productWrapper {
+	line-height: 1.4em;
+	font-size: 14px;
+}
+
+#v65-checkoutCartSummaryWrapper {
+	top: 12px;
+}
+
+.v65-productBadge {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.v65-wine-profile {
+	@include font-size(12px);
+	line-height: 1.4em;
+}
+
+/* ------- Thank you form -------*/
+#Form228a7904-e134-9ccf-82c9-ba31f0302040 {
+	width: 100%;
+
+	fieldset {
+		border: 0;
+		padding: 0;
+	}
+
+	legend {
+		display: none;
+	}
+
+	label[for="Form1"] {
+		display: none;
+	}
+
+	label[for="Email"] {
+		display: none;
+	}
+
+	
+}

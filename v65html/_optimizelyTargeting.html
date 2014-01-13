@@ -1,0 +1,39 @@
+<script>
+window['optimizely'] = window['optimizely'] || [];   //initialize object
+
+// now create logic for parsing cookie
+function readCookie(n){n+='=';for(var a=document.cookie.split(/;\s*/),i=a.length-1;i>=0;i--)if(!a[i].indexOf(n))return a[i].replace(n,'');}   //create cookie reader function
+
+var experimentId = 289931123;
+var defaultVariationId = 560590466;
+
+var cookie_obj = {
+	"WTA": 557663810,
+	"SIM": 556581222,
+	"FRA": 560600964,
+	"I04": 557040883,
+	"PAH": 557101492,
+	"L04": 554055183,
+	"CAS": 560101868,
+	"ELV": 561660443,
+	"ARS": 536083472,
+	"HFE": 560851315,
+	"BMO": 554492513,
+	"SPL": 551682680
+}; 
+
+//grab cookie value
+cookie_val = readCookie('origin_cookie');  
+
+if(typeof cookie_val != 'undefined'){
+	cookie_val = cookie_val.toUpperCase();
+}
+
+//if cookie_val is defined and is one of our known wineries
+if(typeof cookie_val != 'undefined' && typeof cookie_obj[cookie_val] != 'undefined') {   
+	window['optimizely'].push(["bucketVisitor", experimentId, cookie_obj[cookie_val]]);   //make API call to bucket visitor to correct variation
+} else {
+	window['optimizely'].push(["bucketVisitor", experimentId, defaultVariationId]);   //make API call to bucket visitor to default variation
+}
+
+</script>

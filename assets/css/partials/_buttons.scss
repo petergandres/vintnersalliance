@@ -1,0 +1,107 @@
+button {
+	@include boxSizing();
+
+	span{
+		padding: 0 0.5em;
+	}
+
+	&.defaultBtn,  &.modalBtn,  &.largeBtn{
+		@include gradient($buttonColorTop, $buttonColorBottom);
+		border: 2px solid $buttonBorder;
+		border-radius: 5px;
+		text-decoration: none;
+		vertical-align: middle;
+		text-shadow: 0 -1px 0 lighten($buttonColorBottom, 10%);
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		
+		span{
+			background: none;
+			color: $buttonFontColor;
+			height: auto;
+			line-height: inherit;
+		}
+
+		&:hover, &:active{
+			@include gradient(lighten($buttonColorTop, 5%), lighten($buttonColorBottom, 5%));
+			box-shadow: inset 0 1px 0 0 lighten($buttonColorBottom, 10%);
+		}
+	}
+
+	&.modalBtn, &.altModalBtn{
+		height: 2.5em;
+		line-height: inherit;
+		@include font-size(12px);
+	}
+
+	&.altBtn, &.altModalBtn, &.altLargeBtn{
+		background: $altButton;
+		border: 2px solid $altButton;
+		border-radius: 5px;
+		text-decoration: none;
+		vertical-align: middle;
+		
+		span{
+			background: none;
+			color: $altButtonFontColor;
+			height: auto;
+			line-height: inherit;
+		}
+
+		&:hover, &:active{
+			background: (darken($altButton, 5%));
+		}
+	}
+}
+
+a {
+	span{
+		padding: 0 0.5em;
+		height: auto;
+		line-height: inherit;
+	}
+	
+	&.linkBtn, &.modalLinkBtn, &.largeLinkBtn{
+		@include gradient($buttonColorTop, $buttonColorBottom);
+		border: 2px solid $buttonBorder;
+		border-radius: 5px;
+		text-decoration: none;
+		vertical-align: middle;
+		text-shadow: 0 -1px 0 lighten($buttonColorBottom, 10%);
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		
+		span{
+			background: none;
+			color: $buttonFontColor;
+			height: auto;
+			line-height: inherit;
+		}
+
+		&:hover, &:active{
+			@include gradient(lighten($buttonColorTop, 5%), lighten($buttonColorBottom, 5%));
+			box-shadow: inset 0 1px 0 0 lighten($buttonColorBottom, 10%);
+		}
+	}
+
+	&.linkAltBtn, &.modalLinkAltBtn, &.modalLinkAltBtn {
+		background: $altButton;
+		border: 2px solid $altButton;
+		border-radius: 5px;
+		text-decoration: none;
+		vertical-align: middle;
+		
+		span{
+			background: none;
+			color: $altButtonFontColor;
+			height: auto;
+			line-height: inherit;
+		}
+
+		&:hover, &:active{
+			background: (darken($altButton, 5%));
+		}
+	}
+
+	&.modalLinkBtn, &.modalLinkAltBtn, &.modalLinkAltBtn{
+		min-width: auto;
+	}
+}

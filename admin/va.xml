@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<k1technology>
+	<menu>
+		<menuitem icon="iconReports.png" id="reports" linkto="/reports/index.cfm?method=reports.frames" target="Wrapper">
+			<submenuitem id="Sales" linkto="/reports/index.cfm?method=salesByDate.frames" target="Body">
+				<dropdownmenuitem id="Disbursement (Custom)" linkto="/custom/winedirect/index.cfm?method=disbursements.frames" target="Body"/>
+			</submenuitem>
+		</menuitem>
+	</menu>
+</k1technology>
