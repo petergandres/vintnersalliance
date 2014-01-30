@@ -20,6 +20,7 @@
 .newsletter {
 	@include group();
 	margin-bottom: 1em;
+	border-bottom: 2px dotted #ccc;
 
 	.v65-pod {
 		float: left;

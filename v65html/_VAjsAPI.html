@@ -1,1 +1,27 @@
-<script>(function(){var e={queue:[]};window.jwjsapi=e;e.subscribe=function(t,n,r){e.queue.push(["subscribe",t,n,r])};e.submit=function(t){var n,r;if(e.queue.length==0){return t(false,[],"call jwjsapi_subscribe() at least once first")}n="callback_"+Math.round(Math.random()*1e8);e[n]=t;r=document.createElement("script");r.type="text/javascript";r.src=""+document.location.protocol+"//jasonwoof.com/vin65_jsapi.php?"+"cb="+n+"&args="+encodeURIComponent(JSON.stringify(e.queue))+"&nocache="+Math.round(Math.random()*1e8);e.queue=[];document.getElementsByTagName("head")[0].appendChild(r)};e.log=function(){console.log.apply(console,arguments)}})()</script>
+<script>
+(function() {
+			var me = {queue: []};
+			window.jwjsapi = me;
+
+			me.subscribe = function(email, list, subscribe) {
+				me.queue.push(['subscribe', email, list, subscribe]);
+			};
+			me.submit = function(callback) {
+				var jsonp_callback, script;
+				if (me.queue.length == 0) {
+					return callback(false, [], "call jwjsapi_subscribe() at least once first");
+				}
+				jsonp_callback = 'callback_' + Math.round(Math.random() * 100000000);
+				me[jsonp_callback] = callback;
+				script = document.createElement('script'); 
+				script.type = 'text/javascript'; 
+				script.src = '' + document.location.protocol + '//jasonwoof.com/vin65_jsapi.php?' +
+					'cb=' + jsonp_callback +
+					'&args=' + encodeURIComponent(JSON.stringify(me.queue)) +
+					'&nocache=' + Math.round(Math.random() * 100000000);
+				me.queue = [];
+				document.getElementsByTagName("head")[0].appendChild(script); 
+			};
+			me.log = function() {console.log.apply(console, arguments);}
+		})();
+</script>

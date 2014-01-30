@@ -93,7 +93,7 @@ h6 {
 	margin-bottom: 10px;
 }
 
-p, blockquote, ul, ol, dl {
+p, blockquote, ul, ol, dl, form {
 	@include font-size(14px);
 	margin: 0 0 0.8em;
 	line-height: 1.5;

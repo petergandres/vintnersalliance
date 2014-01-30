@@ -35,7 +35,7 @@
 		continueShopping : function(){
 			var continueShoppingLink = v65.cookies.readCookie("continueShoppingURL");
 
-			if(continueShoppingLink != null && continueShoppingLink.length > 10) {
+			if(continueShoppingLink !== null && continueShoppingLink.length > 10) {
 				$(".v65-cartCheckOutButtons a.linkAltBtn, #v65-checkCartSummaryMoreOptions a:contains('Continue shopping')").attr("href", v65.cookies.readCookie("continueShoppingURL"));
 			}
 		},
@@ -69,7 +69,7 @@
 			$('#v65-navBrandTitle, #v65-navPriceTitle').toggle(function() {
 				$(this).css("background-image","url(/assets/images/ico-circle-up.png)");
 				$(this).next().slideDown();
-				$( "#leftMenu" ).css("position","relative").css("width","20%").css("float","left");
+				//$( "#leftMenu" ).css("position","relative").css("width","20%").css("float","left");
 			}, function() {
 				$(this).css("background-image","url(/assets/images/ico-circle-down.png)");
 				$(this).next().slideUp();
@@ -158,7 +158,6 @@
 			leftMenuHeight = $('#leftMenu').height();
 			
 			if(browserWidth > 710 && leftMenuHeight < browserHeight){
-				
 				// whether that's below the current location
 				if (y >= 155) {
 					// if so, adjust top margin to push the menu down.
@@ -183,7 +182,6 @@
 		formatShopBy : function(){
 			$(".shopByItem").find("img[src$='/']").parents(".shopByItem").addClass("noImage");
 			$(".shopByItem").find("img[src$='/']").parent().remove();
-			$(".shopByItem").equalize(2);
 		}
 		
 	}

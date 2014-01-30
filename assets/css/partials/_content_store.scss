@@ -11,18 +11,28 @@
 	text-transform: uppercase;
 
 	@media screen and (max-width: 580px){
-		background-size: 32px 32px;
-		line-height: 32px;
+		background-size: 24px 24px;
+		line-height: 24px;
+		margin-bottom: 1em;
 	}
 }
 
 #v65-navTypeVarietalTitle, #v65-navRegionAppellationTitle {
 	background: url(../images/ico-circle-up.png) no-repeat top right;
 	background-size: 16px 16px;
+
+	@media screen and (max-width: 580px){
+		background-size: 24px 24px;
+		line-height: 24px;
+	}
 }
 
 #v65-navBrand, #v65-navTypeVarietal, #v65-navRegionAppellation, #v65-navPrice {
 	margin-bottom: 0.5em;
+
+	@media screen and (max-width: 580px){
+		margin-bottom: 1.5em;
+	}
 }
 
 #v65-navBrand > ul/*, #v65-navTypeVarietal > ul, #v65-navRegionAppellation > ul*/, #v65-navPrice > ul {
@@ -58,6 +68,10 @@
 
 .v65-product-sortBy {
 	@include font-size(14px);
+
+	form {
+		margin: 6px 0 0 0;
+	}
 }
 
 /* ------- Product Display -------*/
@@ -92,6 +106,11 @@
 		text-align: center;
 		width: 100%;
 		float: none;
+	}
+
+	.v65-productWrapper .v65-product-leftCol .v65-productDrilldown-specs {
+		padding: 2em 0 1em;
+		border-top: 2px dotted #ccc;
 	}
 
 .productRight {
@@ -204,7 +223,7 @@
 }
 
 .v65-wine-profile {
-	@include font-size(12px);
+	@include font-size(14px);
 	line-height: 1.4em;
 }
 
