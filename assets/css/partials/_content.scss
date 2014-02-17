@@ -1,5 +1,25 @@
 #v65-modalContentHeader{
 	background: #333;
+	height: 38px;
+
+	@media screen and (max-width: 600px){
+		height: 80px;
+	}
+}
+
+#v65-modalContentWrapper {
+	background-color: #ffffff;
+	margin: 0 0 0 -300px;
+	width: 600px;
+
+	@media screen and (max-width: 600px){
+		border: 0;
+		position: absolute;
+		left: 0;
+		margin: 0;
+		top: 0;
+		width: 100%;
+	}
 }
 
 .contentWrapper {
@@ -9,6 +29,86 @@
 .checkoutContent {
 	max-width: 830px;
 	margin: 0 auto;
+}
+
+.pagebanner {
+	@include gradient(#f0eee9, #dad8d4);
+	@include boxSizing();
+	border: 1px solid #cbcac8;
+	border-radius: 4px;
+	color: #4e4f40;
+	height: 64px;
+	line-height: 64px;
+	width: 100%;
+	text-align: center;
+	@include font-size(28px);
+
+	@media screen and (max-width: 480px){
+		@include font-size(20px);
+	}
+}
+
+#v65-modalViel {
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include opacity(0.7);
+	z-index: 102;
+	}
+
+.popup {
+	@include boxSizing();
+	background: url(../images/popup/background-pop.jpg) top left no-repeat #edebe4;
+	border-radius: 10px;
+	width: 600px;
+	height: 400px;
+	margin: 0 auto -200px auto;
+	max-width: 100%;
+	padding: 36px 36px 0 216px;
+	position: relative;
+	text-align: center;
+	top: 115px;
+	z-index: 105;
+
+	@media screen and (max-width: 640px){
+		padding: 36px 0 20px 0;
+		margin: 0;
+	}
+
+	@media screen and (max-width: 580px){
+		background-image: none;
+		height: auto;
+	}
+
+	h3 {
+		color: #40372e;
+		@include font-size(26px);
+		font-style: italic;
+		margin-bottom: 1em;
+	}
+
+	p {
+		color: #40372e;
+		@include font-size(18px);
+		line-height: 1;
+		margin-bottom: 1.5em;
+	}
+
+	p.footer {
+		font-family: arial;
+		@include font-size(14px);
+	}
+
+	.closeLink {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		width: 30px;
+		height: 30px;
+	}
 }
 
 .promoWrapper {
@@ -241,6 +341,22 @@
 	@media screen and (max-width: 710px){
 		display: none;
 	}
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* ----- Homepage Styles ----- */

@@ -10,10 +10,22 @@
 			v65.global.leftMenuDropDown();
 
 			$('#selectYourState select').on('change', function() {
-				var str = "AL,AR,DE,KY,MA,MS,MT,OK,PA,RI,SD,UT,VA";
-				var split_str = str.split(",");
-				if (split_str.indexOf(this.value) > -1) {
-					alert( "Sorry about that, your state's regulations prohibit California wineries from shipping to it." );
+				var str_one = "AL,UT";
+				var split_str_one = str_one.split(",");
+				if (split_str_one.indexOf(this.value) > -1) {
+					alert( "Unfortunately, direct shipping of wine into your state is not allowed. Yes, we're as upset as you are... and we're working on ways to change those laws so consumers have the choice that they deserve.\n\nWe work through the national non-profit, Free The Grapes, to try to enable change. For more information and to let your local legislature know you want change, please visit www.freethegrapes.org \n\nIn the interim, if you have an alternate address or want to send a gift to a friend, please feel free to contact us at concierge@vintnersalliance.com and we would be happy to help you." );
+				}
+
+				var str_two = "AR,DE,KY,MA,MS,OK,PA,SD";
+				var split_str_two = str_two.split(",");
+				if (split_str_two.indexOf(this.value) > -1) {
+					alert( "Unfortunately, direct shipping of wine from California into your state is not allowed. Yes, we're as upset as you are... and we're working on ways to change those laws so consumers have the choice that they deserve.\n\nIn the interim, through our network of partners, we may have some options for you.  Please feel free to contact us at concierge@vintnersalliance.com, 800.364.0597, or use the chat window on the bottom left of your browser." );
+				}
+
+				var str_three = "AK,AZ,GA,HI,IN,KS,LA,MI,NJ,OH,VA,WV";
+				var split_str_three = str_three.split(",");
+				if (split_str_three.indexOf(this.value) > -1) {
+					alert( "Unfortunately, direct shipping of wine into your state is restricted by its alcohol import laws.\n\nThat said, we do have a wide assortment that can legally ship to you.\n\nPlease remember, the Concierge Team is here to help. Feel free to browse the site, or contact us at concierge@vintnersalliance.com, 800.364.0597, or use the chat window on the bottom left of your browser." );
 				}
 			});
 		},
@@ -66,7 +78,20 @@
 			$(".v65-home").remove();
 		},
 		leftMenuDropDown: function() {
-			$('#v65-navBrandTitle, #v65-navPriceTitle').toggle(function() {
+			/*$('#v65-navBrandTitle').toggle(function() {
+				$(this).css("background-image","url(/assets/images/ico-circle-up.png)");
+				$(this).next().slideDown();
+				
+				if(browserWidth > 710){
+					$( "#leftMenu" ).css("position","relative").css("width","20%").css("float","left");
+				}
+
+			}, function() {
+				$(this).css("background-image","url(/assets/images/ico-circle-down.png)");
+				$(this).next().slideUp();
+			});*/
+
+			$('#v65-navPriceTitle').toggle(function() {
 				$(this).css("background-image","url(/assets/images/ico-circle-up.png)");
 				$(this).next().slideDown();
 				//$( "#leftMenu" ).css("position","relative").css("width","20%").css("float","left");
@@ -201,6 +226,14 @@ $( document ).ready(function() {
 		myString = $(this).text();
 		myStringPOS = myString.indexOf('-- ');
 		$(this).text(myString.substring(myStringPOS+3));
+	});
+
+	$( "#v65-modalViel" ).on( "click", function() {
+		vin65.modal.closeWindow();
+	});
+
+	$( "#v65-modalViel" ).click(function() {
+		vin65.modal.closeWindow();
 	});
 });
 

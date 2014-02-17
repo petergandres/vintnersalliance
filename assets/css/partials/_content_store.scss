@@ -113,20 +113,41 @@
 		border-top: 2px dotted #ccc;
 	}
 
+	.productDrilldownTitle {
+		float: right;
+		width: 62.5%;
+
+		@media screen and (max-width: 680px){
+			float: none;
+			text-align: center;
+			width: 100%;
+		}
+
+	}
+
 .productRight {
 	float: left;
 	width: 66%;
 }
 
 	.v65-product-brand a {
-		color: #5c5c56;
-		@include font-size(14px);
+		color: #453221;
+		@include font-size(21px);
+		line-height: 23px;
+
+		&:hover {
+			color: #ab4e4e;
+		}
 	}
 
 .productDrilldownTitle {
 	.v65-product-brand a {
 		color: #5c5c56;
 		@include font-size(22px);
+
+		&:hover {
+			color: #ab4e4e;
+		}
 	}
 }
 
@@ -184,6 +205,7 @@
 }
 
 
+
 .v65-product-addToCart-priceWrapper {
 	color: #ab4e4e;
 	/*color: #828064;*/
@@ -227,6 +249,32 @@
 	line-height: 1.4em;
 }
 
+/* ------- Cart -------*/
+
+.v65-cartCheckOutButtons a {
+	@include boxSizing();
+}
+
+#v65-cartCheckOutCoupons input {
+	height: 30px;
+	line-height: 30px;
+}
+
+.v65-cartItem form {
+	padding-top: 8px;
+	width: auto;
+}
+
+.v65-cartItemDescription-sku {
+	@media screen and (max-width: 580px){
+		display: none;
+	}
+}
+
+#v65-cartTable .modalBtn, #v65-cartTable .modalLinkAltBtn {
+	@include font-size(12px);
+}
+
 /* ------- Thank you form -------*/
 #Form228a7904-e134-9ccf-82c9-ba31f0302040 {
 	width: 100%;
@@ -247,6 +295,5 @@
 	label[for="Email"] {
 		display: none;
 	}
-
 	
 }

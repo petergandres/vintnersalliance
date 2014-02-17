@@ -212,8 +212,28 @@
 .slideContent {
 	float: right;
 	text-align: center;
-	padding: 28px 1em 0 0;
+	padding: 22px 1em 0 0;
 	width: 50%;
+
+	.videoLink {
+		@include group();
+		line-height: 1em;
+		text-align: left;
+		width: 84%;
+		margin: 0 auto;
+
+		img {
+			float: left;
+			margin-right: 10px;
+			margin-top: -4px;
+		}
+
+		a {
+			color: #aaa;
+			@include font-size(12px);
+			text-shadow: 0 0 0 #000;	
+		}
+	}
 
 	@media screen and (max-width: 790px){
 		margin: 0 auto;
@@ -233,7 +253,9 @@
 	h1 {
 		color: #fff;
 		font-family: $fontSerif;
+		font-style: italic;
 		@include font-size(30px);
+		margin-bottom: 6px;
 		text-shadow: 0 1px 0 #000;
 
 		@media screen and (max-width: 1050px){
@@ -245,6 +267,7 @@
 		color: #fff;
 		font-family: $fontSerif;
 		@include font-size(24px);
+		margin-bottom: 6px;
 		text-shadow: 0 1px 0 #000;
 	}
 
@@ -252,6 +275,7 @@
 		color: #fff;
 		font-family: $fontSanSerif;
 		@include font-size(14px);
+		margin-bottom: 6px;
 		text-shadow: 0 1px 0 #000;
 	}
 

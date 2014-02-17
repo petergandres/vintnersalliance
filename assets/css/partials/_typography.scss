@@ -1,5 +1,6 @@
 html {
 	font-size: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -33,21 +34,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	color: #828064;
-	@include font-size(36px);
-	font-style: italic;
+	color: #4d4d43;
+	@include font-size(32px);
 	margin-bottom: 0.5em;
+
+	em {
+		color: #828064;
+		@include font-size(24px);
+		font-style: normal;
+	}
 }
 
 h2 {
-	color: #828064;
+	color: #4d4d43;
 	@include font-size(36px);
-	font-style: italic;
 	margin-bottom: 0.5em;
 }
 
 h3 {
-	color: #828064;
+	color: #4d4d43;
 	@include font-size(24px);
 	margin-bottom: 0.5em;
 }
@@ -76,8 +81,8 @@ h6 {
 
 .v65-title { 
 	color: #453221;
-	@include font-size(22px);
-	line-height: 26px;
+	@include font-size(21px);
+	line-height: 23px;
 	font-weight: normal;
 	margin-bottom: 10px;
 

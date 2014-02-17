@@ -72,3 +72,13 @@ $userToolsHoverColor: #fff; //Font Color for usertools
 		height:100%;
 	}
 }
+
+@function calculateOpacity($opacity) {
+    $IEOpacity: $opacity * 100;
+    @return alpha(opacity=$IEOpacity);
+}
+
+@mixin opacity($amount) {
+    opacity: $amount;
+    filter: calculateOpacity($amount); /* For IE8 and earlier */
+}
